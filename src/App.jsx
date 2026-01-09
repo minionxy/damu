@@ -1,34 +1,64 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react'
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const App = () => {
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
+    <div
+      style={{
+        minHeight: '100vh',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: '#f4f6f8',
+        fontFamily: 'Segoe UI, Arial, sans-serif',
+        textAlign: 'center',
+        padding: '20px'
+      }}
+    >
+      <h1 style={{ fontSize: '2.8rem', color: '#1f2937' }}>
+        Welcome to Our Application
+      </h1>
+
+      <p
+        style={{
+          maxWidth: '520px',
+          marginTop: '15px',
+          fontSize: '1.1rem',
+          color: '#4b5563',
+          lineHeight: '1.6'
+        }}
+      >
+        We’re glad to have you here. This application is designed to provide
+        a smooth, simple, and user-friendly experience for managing and
+        exploring features efficiently.
       </p>
-    </>
+
+      <button
+        style={{
+          marginTop: '30px',
+          padding: '12px 26px',
+          backgroundColor: '#2563eb',
+          color: '#ffffff',
+          border: 'none',
+          borderRadius: '6px',
+          fontSize: '1rem',
+          cursor: 'pointer'
+        }}
+        onClick={() => alert('Welcome!')}
+      >
+        Continue
+      </button>
+
+      <footer
+        style={{
+          marginTop: '50px',
+          fontSize: '0.9rem',
+          color: '#6b7280'
+        }}
+      >
+        © 2026 All Rights Reserved
+      </footer>
+    </div>
   )
 }
 
